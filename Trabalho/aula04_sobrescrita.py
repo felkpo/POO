@@ -23,3 +23,9 @@ class Vendedor(Funcionario):
    def calcular_bonus(self):
        # Sobrescreve totalmente: 10% do valor de suas vendas
        return self.total_vendas * 0.10
+# --- TESTES DE EXECUÇÃO ---
+g1 = Gerente("Ana Santos", 5000.0)
+v1 = Vendedor("Carlos Lima", 2000.0, 30000.0)
+
+print(f"Bônus da Gerente {g1.nome}: R$ {g1.calcular_bonus():.2f}")
+print(f"Bônus do Vendedor {v1.nome}: R$ {v1.calcular_bonus():.2f}")
